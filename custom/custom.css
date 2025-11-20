@@ -1,0 +1,263 @@
+/* ==== INDICADOR DE CARGA ==== */
+body::before {
+    content: "🎨 YPF THEME ACTIVE" !important;
+    position: fixed !important;
+    top: 10px !important;
+    right: 20px !important;
+    background: #FF0000 !important;
+    color: #FFFFFF !important;
+    padding: 10px 15px !important;
+    z-index: 999999 !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    border-radius: 6px !important;
+    border: 2px solid #FFFFFF !important;
+    font-family: Arial, sans-serif !important;
+}
+
+/* ==== PALETA YPF ==== */
+:root {
+    --ypf-bg: #0A2C4A !important;
+    --ypf-card: #103A63 !important;
+    --ypf-line: #6CC0E5 !important;
+    --ypf-text: #FFFFFF !important;
+    --ypf-text-soft: #C7D8E3 !important;
+}
+
+/* ==== FORZAR FONDO EN TODA LA APLICACIÓN ==== */
+html {
+    background: var(--ypf-bg) !important;
+    background-color: var(--ypf-bg) !important;
+}
+
+body.mb-wrapper {
+    background: var(--ypf-bg) !important;
+    background-color: var(--ypf-bg) !important;
+    color: var(--ypf-text) !important;
+}
+
+#root {
+    background: var(--ypf-bg) !important;
+    background-color: var(--ypf-bg) !important;
+    min-height: 100vh !important;
+}
+
+/* Forzar en todos los divs principales */
+#root > div {
+    background: var(--ypf-bg) !important;
+    background-color: var(--ypf-bg) !important;
+}
+
+/* Elementos que comunmente tienen fondo blanco */
+div, main, section, article {
+    background-color: var(--ypf-bg) !important;
+}
+
+/* ==== NAVEGACIÓN Y SIDEBAR ==== */
+nav, header, .sidebar {
+    background: var(--ypf-card) !important;
+    background-color: var(--ypf-card) !important;
+    border-bottom: 1px solid #1B4F79 !important;
+}
+
+/* Links y elementos de navegación */
+nav a, nav span, nav button,
+header a, header span, header button,
+.sidebar a, .sidebar span, .sidebar button {
+    color: var(--ypf-text) !important;
+}
+
+/* Forzar color en elementos de navegación por posición */
+body > div > div:first-child,
+body > div > nav,
+body > div > header {
+    background: var(--ypf-card) !important;
+    background-color: var(--ypf-card) !important;
+}
+
+/* ==== TARJETAS ==== */
+.Card, .DashCard, .DashboardCard, .Card-container, [data-testid="dashcard"] {
+    background: var(--ypf-card) !important;
+    background-color: var(--ypf-card) !important;
+    border-radius: 12px !important;
+    border: 1px solid #1B4F79 !important;
+    color: var(--ypf-text) !important;
+    box-shadow: 0 0 8px rgba(0,0,0,0.25) !important;
+}
+
+/* Contenido dentro de las tarjetas */
+.Card .Card-body, .DashCard .Card-body {
+    background: transparent !important;
+    color: var(--ypf-text) !important;
+}
+
+/* ==== TITULOS DE TARJETAS ==== */
+.Card-title {
+    color: var(--ypf-text) !important;
+    font-weight: bold !important;
+}
+
+/* ==== KPI / VALORES ==== */
+.ScalarValue {
+    color: var(--ypf-text) !important;
+    font-size: 2.3rem !important;
+}
+
+/* ==== TEXTOS SECUNDARIOS / DESCRIPCIONES ==== */
+.Card-subtitle, .Metadata, .Cell-description {
+    color: var(--ypf-text-soft) !important;
+}
+
+/* ==== TABLAS ==== */
+.Table, .Table-cell, .Table-header {
+    background: var(--ypf-card) !important;
+    color: var(--ypf-text) !important;
+}
+
+.Table-header {
+    background: #154F7A !important;
+}
+
+/* ==== FILTROS ==== */
+.FilterWidget, .FieldFilter, .FieldFilter input {
+    background: #154F7A !important;
+    color: var(--ypf-text) !important;
+    border-radius: 8px !important;
+}
+
+.FieldFilter input::placeholder {
+    color: var(--ypf-text-soft) !important;
+}
+
+/* ==== ESPACIADOS ==== */
+.DashCard {
+    padding: 12px !important;
+}
+
+/* ==== OVERRIDE AGRESIVO PARA TODOS LOS ELEMENTOS ==== */
+* {
+    background-image: none !important;
+}
+
+/* Forzar colores por jerarquía de elementos */
+* {
+    color: var(--ypf-text) !important;
+}
+
+div:not([class*="icon"]):not([class*="Icon"]) {
+    background-color: var(--ypf-bg) !important;
+}
+
+/* Elementos que típicamente son blancos en Metabase */
+[style*="background-color: rgb(255, 255, 255)"],
+[style*="background: white"],
+[style*="background: #fff"] {
+    background: var(--ypf-bg) !important;
+    background-color: var(--ypf-bg) !important;
+}
+
+/* Forzar texto visible */
+span, p, h1, h2, h3, h4, h5, h6, a, button, label {
+    color: var(--ypf-text) !important;
+}
+
+/* ==== CONTROLES AVANZADOS ==== */
+
+/* 🎨 BOTONES */
+button, .Button, [role="button"] {
+    background: var(--ypf-line) !important;
+    color: #0A2C4A !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 8px 16px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+}
+
+button:hover, .Button:hover {
+    background: #8BD1F0 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* 🔍 INPUTS Y FORMULARIOS */
+input, textarea, select {
+    background: #154F7A !important;
+    color: var(--ypf-text) !important;
+    border: 1px solid var(--ypf-line) !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--ypf-line) !important;
+    box-shadow: 0 0 0 2px rgba(108, 192, 229, 0.2) !important;
+}
+
+/* 📊 GRÁFICOS Y VISUALIZACIONES */
+svg text {
+    fill: var(--ypf-text) !important;
+}
+
+.recharts-text {
+    fill: var(--ypf-text) !important;
+}
+
+/* Líneas de gráficos */
+.recharts-line-curve {
+    stroke: var(--ypf-line) !important;
+    stroke-width: 3px !important;
+}
+
+/* 🏷️ BADGES Y ETIQUETAS */
+.Badge, .Label, .Tag {
+    background: var(--ypf-line) !important;
+    color: #0A2C4A !important;
+    border-radius: 12px !important;
+    padding: 4px 8px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+/* 🚨 ALERTAS Y NOTIFICACIONES */
+.Alert, .Toast, .Notification {
+    background: var(--ypf-card) !important;
+    border-left: 4px solid var(--ypf-line) !important;
+    color: var(--ypf-text) !important;
+}
+
+/* 📱 RESPONSIVE - MOBILE */
+@media (max-width: 768px) {
+    body::before {
+        top: 5px !important;
+        right: 5px !important;
+        padding: 5px 8px !important;
+        font-size: 10px !important;
+    }
+}
+
+/* 🎭 ANIMACIONES YPF */
+@keyframes ypfPulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.Card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(108, 192, 229, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* 🔧 UTILIDADES AVANZADAS */
+.ypf-hide { display: none !important; }
+.ypf-highlight { background: var(--ypf-line) !important; color: #0A2C4A !important; }
+.ypf-accent { border-left: 4px solid var(--ypf-line) !important; }
+
+/* 💡 TOOLTIPS */
+.Tooltip, [data-tooltip] {
+    background: var(--ypf-card) !important;
+    color: var(--ypf-text) !important;
+    border: 1px solid var(--ypf-line) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+}
