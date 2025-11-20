@@ -1,19 +1,3 @@
-/* ==== INDICADOR DE CARGA ==== */
-body::before {
-    content: "🎨 YPF THEME ACTIVE" !important;
-    position: fixed !important;
-    top: 10px !important;
-    right: 20px !important;
-    background: #FF0000 !important;
-    color: #FFFFFF !important;
-    padding: 10px 15px !important;
-    z-index: 999999 !important;
-    font-size: 14px !important;
-    font-weight: bold !important;
-    border-radius: 6px !important;
-    border: 2px solid #FFFFFF !important;
-    font-family: Arial, sans-serif !important;
-}
 
 /* ==== PALETA YPF ==== */
 :root {
@@ -25,39 +9,47 @@ body::before {
 }
 
 /* ==== FORZAR FONDO EN TODA LA APLICACIÓN ==== */
-html {
-    background: var(--ypf-bg) !important;
-    background-color: var(--ypf-bg) !important;
-}
 
-body.mb-wrapper {
-    background: var(--ypf-bg) !important;
-    background-color: var(--ypf-bg) !important;
+body, .mb-wrapper {
+    background: linear-gradient(135deg, #0A2C4A 0%, #103A63 100%) !important;
     color: var(--ypf-text) !important;
-}
-
-#root {
-    background: var(--ypf-bg) !important;
-    background-color: var(--ypf-bg) !important;
     min-height: 100vh !important;
 }
 
-/* Forzar en todos los divs principales */
-#root > div {
-    background: var(--ypf-bg) !important;
-    background-color: var(--ypf-bg) !important;
+/* Asegura que los contenedores internos sean transparentes */
+#root, #root > div, main, section, article, div {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
-/* Elementos que comunmente tienen fondo blanco */
-div, main, section, article {
-    background-color: var(--ypf-bg) !important;
-}
+/* Banner fijo JT-SOFTWARE arriba a la derecha */
 
 /* ==== NAVEGACIÓN Y SIDEBAR ==== */
 nav, header, .sidebar {
     background: var(--ypf-card) !important;
     background-color: var(--ypf-card) !important;
     border-bottom: 1px solid #1B4F79 !important;
+}
+
+/* Logo JT-SOFTWARE en el header usando ::after */
+header::after {
+    content: "JT-SOFTWARE";
+    display: inline-block;
+    background: #FF0000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 18px;
+    border-radius: 8px;
+    margin-left: 24px;
+    vertical-align: middle;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    letter-spacing: 2px;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 /* Links y elementos de navegación */
@@ -132,33 +124,6 @@ body > div > header {
 /* ==== ESPACIADOS ==== */
 .DashCard {
     padding: 12px !important;
-}
-
-/* ==== OVERRIDE AGRESIVO PARA TODOS LOS ELEMENTOS ==== */
-* {
-    background-image: none !important;
-}
-
-/* Forzar colores por jerarquía de elementos */
-* {
-    color: var(--ypf-text) !important;
-}
-
-div:not([class*="icon"]):not([class*="Icon"]) {
-    background-color: var(--ypf-bg) !important;
-}
-
-/* Elementos que típicamente son blancos en Metabase */
-[style*="background-color: rgb(255, 255, 255)"],
-[style*="background: white"],
-[style*="background: #fff"] {
-    background: var(--ypf-bg) !important;
-    background-color: var(--ypf-bg) !important;
-}
-
-/* Forzar texto visible */
-span, p, h1, h2, h3, h4, h5, h6, a, button, label {
-    color: var(--ypf-text) !important;
 }
 
 /* ==== CONTROLES AVANZADOS ==== */
